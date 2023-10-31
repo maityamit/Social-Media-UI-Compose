@@ -90,7 +90,7 @@ fun GreetingPreview() {
 
 
 @Composable
-fun PostItem(post: Post) {
+fun PostItem(post: PostModel) {
 
     Row(
         modifier = Modifier
@@ -236,23 +236,9 @@ fun PostItem(post: Post) {
     }
 }
 
-data class Post(
-    val authorInfo: String,
-    val authorImageRes: Int,
-    val anotherText: String,
-    val likes: Int,
-    val comments: Int,
-    val mediaType: MediaType,
-    val mediaRes: Int,
-    val time: String
-)
-
-enum class MediaType {
-    IMAGE, AUDIO, VIDEO, TEXT
-}
 
 val posts = listOf(
-    Post(
+    PostModel(
         authorInfo = "John Doe",
         authorImageRes = R.drawable.untitled,
         anotherText = "Just a test post",
@@ -262,7 +248,7 @@ val posts = listOf(
         mediaRes = R.drawable.untitled,
         time = "2 Hours ago"
     ),
-    Post(
+    PostModel(
         authorInfo = "Jane Smith",
         authorImageRes = R.drawable.untitled,
         anotherText = "Hello World!",
@@ -272,7 +258,7 @@ val posts = listOf(
         mediaRes = R.drawable.untitled,
         time = "2 Hours ago"
     ),
-    Post(
+    PostModel(
         authorInfo = "James Brown",
         authorImageRes = R.drawable.untitled,
         anotherText = "A video post",
@@ -282,7 +268,7 @@ val posts = listOf(
         mediaRes = R.drawable.untitled,
         time = "2 Hours ago"
     ),
-    Post(
+    PostModel(
         authorInfo = "John Doe",
         authorImageRes = R.drawable.untitled,
         anotherText = "Just a test post",
@@ -292,17 +278,7 @@ val posts = listOf(
         mediaRes = R.drawable.untitled,
         time = "2 Hours ago"
     ),
-    Post(
-        authorInfo = "John Doe",
-        authorImageRes = R.drawable.untitled,
-        anotherText = "Just a test post",
-        likes = 10,
-        comments = 5,
-        mediaType = MediaType.IMAGE,
-        mediaRes = R.drawable.untitled,
-        time = "2 Hours ago"
-    ),
-    Post(
+    PostModel(
         authorInfo = "John Doe",
         authorImageRes = R.drawable.untitled,
         anotherText = "Just a test post",
