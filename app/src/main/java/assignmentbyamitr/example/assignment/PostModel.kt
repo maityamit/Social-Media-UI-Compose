@@ -9,7 +9,8 @@ data class PostModel(
     val comments: Int,
     val mediaType: MediaType,
     val mediaRes: Int,
-    val time: String
+    val time: String,
+    val mainText:String
 )
 
 enum class MediaType {
